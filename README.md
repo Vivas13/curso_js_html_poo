@@ -31,7 +31,8 @@
             ejemplo para ir a la carpeta de documentos :
                 C:\Users\(El nombre de su usuario)\Documents
 
+        Usen el comando
+            git clone "La url de su proyecto"
+
         Sigan estos pasos para colaborar https://www.youtube.com/watch?v=BPns9r76vSI&t=1s
         Nota : La copia esta en sus repositorio y ese el que deben clonar "NO EL ORIGINAL"
-
-        Usen el comando git clone "La url de su proyecto"
