@@ -1,5 +1,7 @@
 Completar los ejericicos de Javascript
 
+> Folder structure options and naming conventions for software projects
+
 ### En la carpeta src estan todos los ejercicios en su respectiva carpeta con su archivo main.js y index.html
 
 .
