@@ -1,6 +1,4 @@
-Completar los ejericicos de Javascript
-
-> Folder structure options and naming conventions for software projects
+# Completar los ejericicos de Javascript
 
 ### En la carpeta src estan todos los ejercicios en su respectiva carpeta con su archivo main.js y index.html
 
@@ -16,6 +14,7 @@ Completar los ejericicos de Javascript
 ### Usar git
     Instalacion
         https://git-scm.com/
+        Nota : indiquen siguiente a todo en la instalacion.
 
     Configuracion
         Abrir la terminal CMD (Simbolo del Sistema ) o la POWERSHELL
@@ -28,6 +27,7 @@ Completar los ejericicos de Javascript
     Participar
 
         Para moverse entre carpetas en la terminal usen el comando "cd" en la terminal y la ruta
+
             ejemplo para ir a la carpeta de documentos :
                 C:\Users\(El nombre de su usuario)\Documents
 
