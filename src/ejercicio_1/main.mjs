@@ -124,11 +124,22 @@ class App {
     `;
 
     this.salidaRespuestas.innerHTML = `
-    <h3>a) Pocentaje por vehiculo </h3>
-    <p>Tipo 1 = ${peaje.PorcentajeVehiculoTipo1()} %</p>
-    <p>Tipo 2 = ${peaje.PorcentajeVehiculoTipo2()} %</p>
-    <p>Tipo 3 = ${peaje.PorcentajeVehiculoTipo3()} %</p>
-    <h3>b) Al peaje le toca el 40% son ${peaje.TotalPagos()}}</h3>
+    <details open>
+      <summary>
+        a) Pocentaje por vehiculo
+      </summary>
+      <ol>
+        <li>Tipo 1 = ${peaje.PorcentajeVehiculoTipo1()} %</li>
+        <li>Tipo 2 = ${peaje.PorcentajeVehiculoTipo2()} %</li>
+        <li>Tipo 3 = ${peaje.PorcentajeVehiculoTipo3()} %</li>
+      <ol>
+    </details>
+    <details open>
+      <summary>
+        b) Porcentaje que le toca al peaje
+      </summary>
+      <p>40% son ${peaje.TotalPagos()}</p>
+    </details>
   `;
   }
 }

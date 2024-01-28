@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "The JavaScript template",
   "scripts": {
-    "start": "parcel",
+    "start": " parcel",
     "build": "parcel build",
     "prepare": "husky install"
   },

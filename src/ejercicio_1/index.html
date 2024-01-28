@@ -7,43 +7,161 @@
   </head>
   <body>
     <a href="/">Inicio</a>
-
+    <!-- Modifiquen esto -->
     <h1>Ejercicio 1</h1>
-
+    <!-- Modifiquen esto -->
     <p>Enunciado</p>
-    
-    <table>
-      <!-- Encabezado de la tabla -->
-      <thead id="salida_cabecera">
-        <!-- Titulos de la tabla -->
-        <tr>
-          <th scope="col">Registro 1</th>
-          <th scope="col">Registro 2</th>
-          <th scope="col">Registro 3</th>
-          <th scope="col">Pago</th>
-        </tr>
-      </thead>
-      <!-- Cuerpo de la tabla -->
-      <tbody id="salida_registros">
-        <!-- Un registro de la tabla -->
-        <tr>
-          <th scope="row">Luis</th>
-          <td>1972</td>
-          <td>1973</td>
-          <td>20</td>
-        </tr>
-      </tbody>
-      <!-- Pie de la tabla -->
-      <tfood>
-        <!-- resultados  -->
-        <tr id="salida_pie">
-          <th scope="row" colspan="3">Total Pagos</th>
-          <td >20</td>
-        </tr>
-      </tfood>
-    </table>
-    <div id="salida_respuestas">
-      <h3>a)</h3>
+
+    <h3>Parte 1</h3>
+    <div class="container">
+      <table>
+        <thead id="salida_cabecera"></thead>
+        <tbody id="salida_registros"></tbody>
+        <tfood>
+          <tr id="salida_pie"></tr>
+        </tfood>
+      </table>
+      <div id="salida_respuestas"></div>
+    </div>
+    <h3>Parte 2 y 3</h3>
+    <div class="container">
+      <!-- Modifiquen esto -->
+      <div class="cuadroClases">
+        <h4>Clase menor</h4>
+        <h5>Cl_Vehiculo</h5>
+        <p>- placa</p>
+        <p>- tipoVehiculo</p>
+        <p>+ constructor()</p>
+        <p>+ Pago()</p>
+      </div>
+
+      <!-- Modifiquen esto -->
+      <div class="cuadroClases">
+        <h4>Clase Mayor</h4>
+        <h5>Cl_Peaje</h5>
+        <p>- acumPagosTotal</p>
+        <p>- contTipo1</p>
+        <p>- contTipo2</p>
+        <p>- contTipo3</p>
+        <p>+ constructor()</p>
+        <p>+ ProcesarVehiculo()</p>
+        <p>+ PorcentajeVehiculoTipo1()</p>
+        <p>+ PorcentajeVehiculoTipo2()</p>
+        <p>+ PorcentajeVehiculoTipo3()</p>
+        <p>+ TotalPagos()</p>
+      </div>
+    </div>
+
+    <h3>Parte 4</h3>
+    <div class="container">
+      acumPagosTotal = contTipo1 = contTipo2 = contTipo3 = 0
+    </div>
+    <h3>Parte 5</h3>
+    <div class="container">
+      <ol>
+        <!-- Modifiquen esto -->
+        <li>
+          <pre>
+Pago por vehiculo = si vehiculo es tipo 1 es igual a 1
+                      devuelte que el costro es 10
+                    sino si vehiculo es tipo 2 es igual a 2
+                      devuelte que el costro es 20
+                    sino si vehiculo es tipo 3 es igual a 3
+                      devuelte que el costro es 50
+
+          </pre>
+        </li>
+        <li>
+          <pre>
+Procesar vehiculo = si vehiculo es tipo 1 es igual a 1
+                      suma uno al contador tipo 1
+                    sino si vehiculo es tipo 2 es igual a 2
+                      suma uno al contador tipo 2
+                    sino si vehiculo es tipo 3 es igual a 3
+                      suma uno al contador tipo 2
+
+                    suma uno al contador de todos los vehiculos
+
+                    acumula el pago del vehiculo que esta procesando
+          </pre>
+        </li>
+        <li>
+          Porcentaje de vehiculos tipo 1 = (cantidad de tipo 1 / cantidad total)
+          * 100
+        </li>
+        <li>
+          Porcentaje de vehiculos tipo 2 = (cantidad de tipo 2 / cantidad total)
+          * 100
+        </li>
+        <li>
+          Porcentaje de vehiculos tipo 3 = (cantidad de tipo 3 / cantidad total)
+          * 100
+        </li>
+      </ol>
+    </div>
+    <!-- No tocar esta parte -->
+    <div class="highlight">
+      <pre>
+        <code>
+class Cl_Vehiculo {
+  constructor(placa, tipoVehiculo) {
+    this.placa = placa;
+    this.tipoVehiculo = tipoVehiculo;
+  }
+
+  Pago() {
+    if (this.tipoVehiculo === 1) {
+      return 10;
+    } else if (this.tipoVehiculo === 2) {
+      return 20;
+    } else if (this.tipoVehiculo === 3) {
+      return 50;
+    }
+  }
+}
+         </code>
+      </pre>
+      <pre>
+        <code>
+class Cl_Peaje {
+  constructor() {
+    this.acumPagosTotal = 0;
+    this.contTipo1 = 0;
+    this.contTipo2 = 0;
+    this.contTipo3 = 0;
+    this.contTotal = 0;
+  }
+
+  ProcesarVehiculo(vehiculo) {
+    if (vehiculo.tipoVehiculo === 1) {
+      this.contTipo1++;
+    } else if (vehiculo.tipoVehiculo === 2) {
+      this.contTipo2++;
+    } else if (vehiculo.tipoVehiculo === 3) {
+      this.contTipo3++;
+    }
+    this.contTotal++;
+    this.acumPagosTotal += vehiculo.Pago();
+  }
+
+  PorcentajeVehiculoTipo1() {
+    return (this.contTipo1 / this.contTotal) * 100;
+  }
+
+  PorcentajeVehiculoTipo2() {
+    return (this.contTipo2 / this.contTotal) * 100;
+  }
+
+  PorcentajeVehiculoTipo3() {
+    return (this.contTipo3 / this.contTotal) * 100;
+  }
+
+  TotalPagos() {
+    return this.acumPagosTotal * 0.4;
+  }
+}
+        </code>
+      </pre>
     </div>
     <script src="./main.mjs" type="module"></script>
   </body>
