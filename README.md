@@ -1,21 +1,17 @@
 Completar los ejericicos de Javascript
 
-En la carpeta src estan todos los ejercicios en su respectiva carpeta con su archivo
+### En la carpeta src estan todos los ejercicios en su respectiva carpeta con su archivo main.js y index.html
 
-main.js
-index.html
+.
+└─ src
+   ├─ ejercicio 1           # Listo
+   ├─ ejericico 2           # Falta
+   ├─ ejercicio 3           # Falta
+   ├─ ejercicio 4           # Falta
+   ├─ ejercicio 5           # Falta
+   └─ ejercicio 6           # Falta
 
--src
- *ejercicio 1
- *ejericico 2
- *ejercicio 3
- *ejercicio 4
- *ejercicio 5
- *ejercicio 6
-
-El ejercicio 1 esta de prueba.
-
-# Usar git
+### Usar git
     Instalacion
         https://git-scm.com/
 
