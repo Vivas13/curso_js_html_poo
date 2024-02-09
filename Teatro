@@ -1,0 +1,67 @@
+class Cl_familia{
+    constructor(nombre, niño, adulto){
+        this.nombre=nombre
+        this.niño=niño
+        this.adulto=adulto
+    }
+
+    Pago(){
+        let pagoNiño= this.niño*5
+        let pagoAdulto= this.adulto*10
+
+        return pagoNiño + pagoAdulto
+    }
+
+    Entrada(En,Ea){
+        if(En < this.niño)
+        return "no"
+        if(Ea < this.adulto)
+        return "no"
+        
+        return "si"
+    }
+
+}
+
+class Cl_Teatro{
+    constructor(){
+        this.acEntradaN=0
+        this.acEntradaA=0
+        this.acTotalPagado=0
+
+    }
+
+    procesarFamilia(f){
+        let pasa= f.Entrada(this.acEntradaN, this.acEntradaA)
+        if(pasa==="no")
+        return 
+        else{
+            this.acTotalPagado= f.Pago()
+            this.acEntradaN-= f.niño
+            this.acEntradaA-= f.adulto
+        }
+    }
+}
+
+let  familia_1= new Cl_familia("1", 3, 2)
+let  familia_2= new Cl_familia("2", 5, 1)
+let  familia_3= new Cl_familia("3", 1, 2)
+let  familia_4= new Cl_familia("4", 1, 1)
+let  familia_5= new Cl_familia("5", 0, 2)
+
+let teatro= new Cl_Teatro(8,20)
+
+teatro.procesarFamilia(familia_1)
+teatro.procesarFamilia(familia_2)
+teatro.procesarFamilia(familia_3)
+teatro.procesarFamilia(familia_4)
+teatro.procesarFamilia(familia_5)
+
+let salida= document.getElementById("app") 
+
+salida.innerHTML += `<br>Nombre ${familia_1.nombre}: Pago $${familia_1.Pago()}, Entrada $${familia_1.Entrada(teatro.acEntradaN, teatro.acEntradaA)}`
+salida.innerHTML += `<br>Nombre ${familia_2.nombre}: Pago $${familia_2.Pago()}, Entrada $${familia_2.Entrada(teatro.acEntradaN, teatro.acEntradaA)}`
+salida.innerHTML += `<br>Nombre ${familia_3.nombre}: Pago $${familia_3.Pago()}, Entrada $${familia_3.Entrada(teatro.acEntradaN, teatro.acEntradaA)}`
+salida.innerHTML += `<br>Nombre ${familia_4.nombre}: Pago $${familia_4.Pago()}, Entrada $${familia_4.Entrada(teatro.acEntradaN, teatro.acEntradaA)}`
+salida.innerHTML += `<br>Nombre ${familia_5.nombre}: Pago $${familia_5.Pago()}, Entrada $${familia_5.Entrada(teatro.acEntradaN, teatro.acEntradaA)}`
+salida.innerHTML+= `<br>Cuanto recibe el teatro en total: $${teatro.acTotalPagado}`
