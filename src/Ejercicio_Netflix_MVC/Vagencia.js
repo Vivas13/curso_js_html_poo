@@ -25,7 +25,7 @@ export class Vagencia {
         reportarsuscriptor(suscriptor) {
         this.tabla.innerHTML += `
         <tr>
-        <td>${suscriptor.nombre}</td>
+        <td>${suscriptor.cedula}</td>
         <td>${suscriptor.plan}</td>
         </tr>`;
         this.lblPlanFav.innerHTML

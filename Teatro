@@ -1,6 +1,6 @@
 class Cl_familia{
-    constructor(nombre, niño, adulto){
-        this.nombre=nombre
+    constructor(cedula, niño, adulto){
+        this.cedula=cedula
         this.niño=niño
         this.adulto=adulto
     }
@@ -59,9 +59,9 @@ teatro.procesarFamilia(familia_5)
 
 let salida= document.getElementById("app") 
 
-salida.innerHTML += `<br>Nombre ${familia_1.nombre}: Pago $${familia_1.Pago()}, Entrada $${familia_1.Entrada(teatro.acEntradaN, teatro.acEntradaA)}`
-salida.innerHTML += `<br>Nombre ${familia_2.nombre}: Pago $${familia_2.Pago()}, Entrada $${familia_2.Entrada(teatro.acEntradaN, teatro.acEntradaA)}`
-salida.innerHTML += `<br>Nombre ${familia_3.nombre}: Pago $${familia_3.Pago()}, Entrada $${familia_3.Entrada(teatro.acEntradaN, teatro.acEntradaA)}`
-salida.innerHTML += `<br>Nombre ${familia_4.nombre}: Pago $${familia_4.Pago()}, Entrada $${familia_4.Entrada(teatro.acEntradaN, teatro.acEntradaA)}`
-salida.innerHTML += `<br>Nombre ${familia_5.nombre}: Pago $${familia_5.Pago()}, Entrada $${familia_5.Entrada(teatro.acEntradaN, teatro.acEntradaA)}`
+salida.innerHTML += `<br>cedula ${familia_1.cedula}: Pago $${familia_1.Pago()}, Entrada $${familia_1.Entrada(teatro.acEntradaN, teatro.acEntradaA)}`
+salida.innerHTML += `<br>cedula ${familia_2.cedula}: Pago $${familia_2.Pago()}, Entrada $${familia_2.Entrada(teatro.acEntradaN, teatro.acEntradaA)}`
+salida.innerHTML += `<br>cedula ${familia_3.cedula}: Pago $${familia_3.Pago()}, Entrada $${familia_3.Entrada(teatro.acEntradaN, teatro.acEntradaA)}`
+salida.innerHTML += `<br>cedula ${familia_4.cedula}: Pago $${familia_4.Pago()}, Entrada $${familia_4.Entrada(teatro.acEntradaN, teatro.acEntradaA)}`
+salida.innerHTML += `<br>cedula ${familia_5.cedula}: Pago $${familia_5.Pago()}, Entrada $${familia_5.Entrada(teatro.acEntradaN, teatro.acEntradaA)}`
 salida.innerHTML+= `<br>Cuanto recibe el teatro en total: $${teatro.acTotalPagado}`

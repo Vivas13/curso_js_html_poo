@@ -4,7 +4,7 @@ constructor(app) {
 this.app = app;
 this.vista = document.getElementById("suscriptorForm");
 this.vista.hidden = true;
-this.innombre = document.getElementById("suscriptorFormInnombre");
+this.incedula = document.getElementById("suscriptorFormIncedula");
 this.inplan = document.getElementById("suscriptorFormInplan");
 this.btAceptar = document.getElementById("suscriptorFormBtAceptar");
 this.btAceptar.onclick = () => this.agregarsuscriptor();
@@ -17,7 +17,7 @@ mostrar() {
     }
     agregarsuscriptor() {
     let suscriptor = new Msuscriptor({
-    nombre: this.innombre.value,
+    cedula: this.incedula.value,
     plan: this.inplan.value,
    
     });
