@@ -21,7 +21,7 @@
 
         Configurar el git con los comandos
             ```
-            git config --global user.name "Tu nombre"
+            git config --global user.name "Tu cedula"
             git config --global user.email "Correo@example.com"
             ```
     Participar
@@ -29,7 +29,7 @@
         Para moverse entre carpetas en la terminal usen el comando "cd" en la terminal y la ruta
 
             ejemplo para ir a la carpeta de documentos :
-                C:\Users\(El nombre de su usuario)\Documents
+                C:\Users\(El cedula de su usuario)\Documents
 
         Usen el comando
             git clone "La url de su proyecto"

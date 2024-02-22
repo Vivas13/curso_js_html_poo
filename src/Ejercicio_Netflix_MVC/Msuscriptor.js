@@ -1,15 +1,15 @@
 export class  Msuscriptor{
-    constructor({nombre, plan}){
-        this.nombre= nombre
+    constructor({cedula, plan}){
+        this.cedula= cedula
         this.plan= plan
         
     }
-    set nombre(n){
-        this._nombre= +n
+    set cedula(n){
+        this._cedula= +n
     }
 
-    get nombre(){
-        return this._nombre
+    get cedula(){
+        return this._cedula
     }
 
     set plan(p){

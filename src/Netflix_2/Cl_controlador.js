@@ -16,7 +16,7 @@ export class controlador{
             let datos= this.Vsuscriptor.leerdatos();
             let suscriptor= new Msuscriptor(datos);
             this.Magencia.procesarSuscriptor(suscriptor);
-            this.Vsuscriptor.reportar(this.salida, suscriptor.nombre,suscriptor.precioB(), suscriptor.precioPsus());
+            this.Vsuscriptor.reportar(this.salida, suscriptor.cedula, suscriptor.precioB(), suscriptor.precioPsus());
 
         }while(confirm("hay otro suscriptor?"))
         this.Vagencia.reportar(

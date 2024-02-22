@@ -55,7 +55,7 @@ class App {
   TableFoot(totalPagos) {
     return `
     <tr>
-      <th colspan="1">Total letras de los nombre</th>
+      <th colspan="1">Total letras de los cedula</th>
       <th>${totalPagos}</th>
     </tr>
     `;
@@ -63,8 +63,8 @@ class App {
 
   run() {
     let mayor = new Cl_Mayor();
-    let menor1 = new Cl_Menor("Nombre", 1);
-    let menor2 = new Cl_Menor("Nombre2", 1);
+    let menor1 = new Cl_Menor("cedula", 1);
+    let menor2 = new Cl_Menor("cedula2", 1);
 
     mayor.ProcesarMenor(menor1);
     mayor.ProcesarMenor(menor2);
